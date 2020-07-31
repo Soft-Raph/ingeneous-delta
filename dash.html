@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="simple-sidebar.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #1a4b84;
@@ -14,24 +17,58 @@
 </head>
 
 <body>
-    <div class="bg-main container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <a href="nav.html"><img src="img/bar.jpeg" alt="logo" class="img-fluid"></a>
-            </div>
-            <div class="col-4">
-                <br>
-                <img src="img/welcome.jpeg" alt="logo" class="img-fluid">
-            </div>
-            <div class="col-4">
-                <img src="img/logo.jpeg" alt="logo" class="img-fluid">
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class=""><img src="img/5.jpeg" alt="logo" class="img-fluid"></div>
+            <div class="list-group list-group-flush">
+                <a href="all-pro.html" class=""><img src="img/5-1.jpeg" alt="logo" class="img-fluid"></a>
+                <a href="new-pro.html" class=""><img src="img/5-2.jpeg" alt="logo" class="img-fluid"></a>
+                <a href="#" class=""><img src="img/5-4.jpeg" alt="logo" class="img-fluid"></a>
+                <a href="sum.html" class=""><img src="img/5-3.jpeg" alt="logo" class="img-fluid"></a>
+                <a href="#" class=""><img src="img/5-5.jpeg" alt="logo" class="img-fluid">
+                </a>
             </div>
         </div>
-        <center>
-            <img src="img/4.jpeg" alt="logo" class="img-fluid">
-        </center>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="bg-main container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/bar.jpeg" id="menu-toggle" alt="logo" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <br>
+                            <img src="img/welcome.jpeg" alt="logo" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/logo.jpeg" alt="logo" class="img-fluid">
+                        </div>
+                    </div>
+                </nav>
+                <center>
+                    <img src="img/4.jpeg" alt="logo" class="img-fluid">
+                </center>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-    <!-- /.container-->
 </body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="jquery.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 
 </html>

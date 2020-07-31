@@ -10,17 +10,45 @@
         body {
             background-color: #1c1815;
         }
+        
+        .float {
+            position: fixed;
+            bottom: 50px;
+            width: 100%;
+        }
     </style>
-    <meta http-equiv="refresh" content="1; URL=login.html" />
+    <meta http-equiv="refresh" content="5; URL=login.html" />
 </head>
 
 <body>
     <div class="xx">
         <center>
             <img src="img/2.jpeg" alt="logo" class="mw-100">
+            <div class="float  container-fluid">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Please Wait</div>
+                </div>
+            </div>
         </center>
     </div>
     <!-- /.container-->
 </body>
+
+
+
+<script>
+    // Code goes here
+    var i = 100;
+
+    var counterBack = setInterval(function() {
+        i--;
+        if (i > 0) {
+            $('.progress-bar').css('width', i + '%');
+        } else {
+            clearInterval(counterBack);
+        }
+
+    }, 1000);
+</script>
 
 </html>
