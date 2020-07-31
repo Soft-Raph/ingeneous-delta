@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bb">
+        <center>
+            <a onclick="goBack()">
+                <img src="img/7.jpeg" alt="logo" class="mw-100" width="400px">
+            </a>
+        </center>
+    </div>
+    <div class="row container-fluid">
+        <div class="col-6">
+            <a onclick="alert('Your report has been saved')">
+                <div class="text-center btn-success btn-sm">
+                    Save
+                </div>
+            </a>
+        </div>
+        <div class="col-6">
+            <a onclick="alert('Your report has been submitted')">
+                <div class="text-center btn-primary btn-sm">
+                    Submit
+                </div>
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- /.container-->
+</body>
+
+
+<script>
+    function goBack() {
+
+        window.history.back();
+
+    }
+</script>
+
+</html>
